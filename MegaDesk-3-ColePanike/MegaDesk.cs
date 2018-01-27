@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MegaDesk_3_ColePanike
 {
-    public partial class Form1 : Form
+    public partial class MegaDesk : Form
     {
-        public Form1()
+        public MegaDesk()
         {
             InitializeComponent();
         }
