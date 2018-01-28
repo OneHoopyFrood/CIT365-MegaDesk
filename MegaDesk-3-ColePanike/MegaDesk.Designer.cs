@@ -75,8 +75,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MegaDesk_3_ColePanike.Properties.Resources.MegaDesk1;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 44);
+            this.pictureBox1.Image = global::MegaDesk_3_ColePanike.Properties.Resources.MegaDesk;
+            this.pictureBox1.Location = new System.Drawing.Point(171, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 201);
+            this.ClientSize = new System.Drawing.Size(309, 201);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
