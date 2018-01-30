@@ -8,3 +8,7 @@ C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\
 C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\MegaDesk-3-ColePanike.csproj.CoreCompileInputs.cache
 C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\MegaDesk-3-ColePanike.exe
 C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\MegaDesk-3-ColePanike.pdb
+C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\MegaDesk_3_ColePanike.SearchQuotes.resources
+C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\MegaDesk_3_ColePanike.ViewAllQuotes.resources
+C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\MegaDesk_3_ColePanike.DisplayQuote.resources
+C:\Users\Cole\Code\cit365\MegaDesk-3-ColePanike\MegaDesk-3-ColePanike\obj\Debug\MegaDesk_3_ColePanike.Resources.AddQuote.resources
