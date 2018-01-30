@@ -233,7 +233,7 @@
             this.depthInput.Name = "depthInput";
             this.depthInput.Size = new System.Drawing.Size(96, 26);
             this.depthInput.TabIndex = 3;
-            this.depthInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.depthInput_KeyDown);
+            this.depthInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depthInput_KeyPress);
             // 
             // AddQuote
             // 

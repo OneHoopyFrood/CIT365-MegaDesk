@@ -77,15 +77,21 @@ namespace MegaDesk_3_ColePanike.Resources
             }
         }
 
-        private void depthInput_KeyDown(object sender, KeyEventArgs e)
+        private void depthInput_KeyPress(object sender, KeyPressEventArgs e)
         {
             TextBox input = (TextBox)sender;
             try
             {
-                int newDepth;
-                if (Int32.TryParse(input.Text, out newDepth))
+                char newKey = e.KeyChar;
+                if (char.IsControl(newKey))
                 {
-                    desk.Width = newDepth;
+                    return; // Don't validate, just ignore
+                }
+
+                int newDepth;
+                if (char.IsDigit(newKey) && Int32.TryParse(input.Text + newKey, out newDepth))
+                {
+                    desk.Depth = newDepth;
                     depthErrorProvider.SetError(this.depthInput, String.Empty);
                     return;
                 }
