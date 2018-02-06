@@ -11,3 +11,5 @@ C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\Mega
 C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\MegaDesk-ColePanike.csproj.CoreCompileInputs.cache
 C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\MegaDesk-ColePanike.exe
 C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\MegaDesk-ColePanike.pdb
+C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\MegaDesk-ColePanike.csprojResolveAssemblyReference.cache
+C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\bin\Debug\DeskQuotes.csv

@@ -32,7 +32,9 @@ namespace MegaDesk_ColePanike
             this.CustomerName = customerName;
             this.Desk = desk;
             this.ProductionDays = productionDays;
-            
+
+            CalculateQuote();
+            QuoteDate = DateTime.Now;
         }
 
         public DeskQuote(string customerName, int width, int depth, int numDrawers, Desk.DeskMaterial material, int productionDays) 
