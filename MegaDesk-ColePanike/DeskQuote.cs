@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace MegaDesk_ColePanike
         public DateTime QuoteDate
         {
             get;
-            private set;
+            set;
         }
         public int ProductionDays
         {
@@ -95,6 +96,13 @@ namespace MegaDesk_ColePanike
         private bool IsRush()
         {
             return ProductionDays < 14;
+        }
+
+        public void SaveToCSV(string filename)
+        {
+            File.AppendAllText(filename, 
+                "\n" + String.Join(",", this.customerName, this.Desk.Width, this.Desk.Depth, this.Desk.NumDrawers, 
+                (int)this.Desk.Material, this.ProductionDays, this.QuoteDate.ToShortDateString()));
         }
     }
 }

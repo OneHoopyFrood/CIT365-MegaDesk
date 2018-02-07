@@ -13,3 +13,4 @@ C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\Mega
 C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\MegaDesk-ColePanike.pdb
 C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\MegaDesk-ColePanike.csprojResolveAssemblyReference.cache
 C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\bin\Debug\DeskQuotes.csv
+C:\Users\Cole\Code\cit365\MegaDesk-ColePanike\MegaDesk-ColePanike\obj\Debug\MegaDesk_ColePanike.ViewQuote.resources

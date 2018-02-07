@@ -36,7 +36,7 @@
             // 
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Image = global::MegaDesk_ColePanike.Properties.Resources.back;
-            this.backButton.Location = new System.Drawing.Point(1, 1);
+            this.backButton.Location = new System.Drawing.Point(12, 12);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(32, 32);
             this.backButton.TabIndex = 1;

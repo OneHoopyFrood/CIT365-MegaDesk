@@ -79,6 +79,12 @@
     <Compile Include="AddQuote.Designer.cs">
       <DependentUpon>AddQuote.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewQuote.Designer.cs">
+      <DependentUpon>ViewQuote.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="SearchQuotes.resx">
       <DependentUpon>SearchQuotes.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +110,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ViewQuote.resx">
+      <DependentUpon>ViewQuote.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DeskQuotes.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

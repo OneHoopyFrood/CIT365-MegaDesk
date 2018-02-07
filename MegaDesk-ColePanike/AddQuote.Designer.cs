@@ -79,6 +79,7 @@
             this.submitButton.Text = "Submit";
             this.submitButton.UseMnemonic = false;
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // customerName
             // 
@@ -195,10 +196,12 @@
             this.rushRadioButton.TabStop = true;
             this.rushRadioButton.Text = "Rush";
             this.rushRadioButton.UseVisualStyleBackColor = true;
+            this.rushRadioButton.CheckedChanged += new System.EventHandler(this.rushRadioButton_CheckedChanged);
             // 
             // rushOptions
             // 
             this.rushOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rushOptions.Enabled = false;
             this.rushOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rushOptions.ForeColor = System.Drawing.SystemColors.WindowText;
             this.rushOptions.FormattingEnabled = true;

@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MegaDesk_ColePanike
@@ -47,7 +43,9 @@ namespace MegaDesk_ColePanike
                     Desk.DeskMaterial material;
                     Enum.TryParse<Desk.DeskMaterial>(line[4], out material);
                     Desk desk = new Desk(int.Parse(line[1]), int.Parse(line[2]), int.Parse(line[3]), material);
-                    return new DeskQuote(line[0], desk, String.IsNullOrEmpty(line[5]) ? 14 : int.Parse(line[5]));
+                    DeskQuote loadedQuote = new DeskQuote(line[0], desk, String.IsNullOrEmpty(line[5]) ? 14 : int.Parse(line[5]));
+                    loadedQuote.QuoteDate = DateTime.Parse(line[6]);
+                    return loadedQuote;
                 }).ToList();
             }
             catch (Exception ex)
@@ -68,6 +66,15 @@ namespace MegaDesk_ColePanike
                     AllQuoteListView.Items.Add(new ListViewItem(new []{ quote.CustomerName, quote.Desk.Material.ToString(), quote.QuoteAmount.ToString("C") }));
                 }
             }
+        }
+
+        private void AllQuoteListView_ItemActivate(object sender, EventArgs e)
+        {
+            ListView list = (ListView)sender;
+            DeskQuote quote = AllQuotes[list.FocusedItem.Index];
+            ViewQuote viewQuoteForm = new ViewQuote(quote);
+            viewQuoteForm.Tag = this;
+            viewQuoteForm.Show(this);
         }
     }
 }

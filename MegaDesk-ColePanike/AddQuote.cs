@@ -24,7 +24,7 @@ namespace MegaDesk_ColePanike.Resources
             materialOptions.DataSource = Enum.GetValues(typeof(Desk.DeskMaterial));
             List<int> possiblePeriods = new List<int> { 3, 5, 7 };
             rushOptions.DataSource = (from numDays in possiblePeriods
-                                     select numDays + " days").ToList();
+                                     select numDays).ToList();
 
             desk = new Desk(24, 12, 2, Desk.DeskMaterial.Pine);
 
@@ -42,7 +42,7 @@ namespace MegaDesk_ColePanike.Resources
 
         }
 
-        private void return_to_main()
+        private void ReturnToMain()
         {
             var mainMenu = (MegaDesk)Tag;
             mainMenu.Show();
@@ -51,7 +51,7 @@ namespace MegaDesk_ColePanike.Resources
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            return_to_main();
+            ReturnToMain();
         }
 
         private void widthInput_Validating(object sender, CancelEventArgs e)
@@ -104,6 +104,35 @@ namespace MegaDesk_ColePanike.Resources
             {
                 depthErrorProvider.SetError(this.depthInput, "Must be between 12-48, inclusive");
             }
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Desk.DeskMaterial newMaterial = (Desk.DeskMaterial)materialOptions.SelectedValue;
+
+                int prodDays = 14;
+                if (rushRadioButton.Checked && rushOptions.SelectedValue != null)
+                {
+                    prodDays = (int)rushOptions.SelectedValue;
+                }
+                DeskQuote newQuote = new DeskQuote(customerName.Text, int.Parse(widthInput.Text), int.Parse(depthInput.Text), (int)numDrawersInput.Value, newMaterial, prodDays);
+                newQuote.SaveToCSV("DeskQuotes.csv");
+                MessageBox.Show("Save Successful!");
+                ReturnToMain();
+                ViewQuote view = new ViewQuote(newQuote);
+                view.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Failed to save!");
+            }
+        }
+
+        private void rushRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            rushOptions.Enabled = rushRadioButton.Checked;
         }
     }
 }
