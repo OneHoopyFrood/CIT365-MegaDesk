@@ -1,0 +1,15 @@
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\DeskQuotes.csv
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe.config
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\MegaDesk.pdb
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.SearchQuotes.resources
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.ViewAllQuotes.resources
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.DisplayQuote.resources
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.Resources.AddQuote.resources
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.MegaDesk.resources
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.Properties.Resources.resources
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.ViewQuote.resources
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.GenerateResource.Cache
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.CoreCompileInputs.cache
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
