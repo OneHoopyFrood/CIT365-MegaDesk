@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_ColePanike
 {
+    //public struct Desk
+    //{
+    //    public DeskMaterial material;
+    //    public int Width;
+    //    public int Depth;
+    //    public int NumDrawers;
+    //}
+
     public class Desk
     {
         public enum DeskMaterial
