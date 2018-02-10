@@ -12,10 +12,19 @@ namespace MegaDesk
         public Desk Desk;
         private string customerName;
         public string CustomerName { get => customerName; set => customerName = value; }
+        private decimal? _quoteAmount = null;
         public decimal QuoteAmount
         {
-            get;
-            private set;
+            get
+            {
+                if (_quoteAmount == null)
+                    CalculateQuote();
+                return _quoteAmount.Value;
+            }
+            private set
+            {
+                _quoteAmount = value;
+            }
         }
         public DateTime QuoteDate
         {
@@ -95,12 +104,12 @@ namespace MegaDesk
 
         private bool IsRush()
         {
-            return ProductionDays < 14;
+            return ProductionDays < 14; 
         }
 
         public void SaveToCSV(string filename)
         {
-            File.AppendAllText(filename, 
+            File.AppendAllText(filename,
                 "\n" + String.Join(",", this.customerName, this.Desk.Width, this.Desk.Depth, this.Desk.NumDrawers, 
                 (int)this.Desk.Material, this.ProductionDays, this.QuoteDate.ToShortDateString()));
         }

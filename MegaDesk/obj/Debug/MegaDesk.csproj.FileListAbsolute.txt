@@ -13,3 +13,4 @@ C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.GenerateRe
 C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.CoreCompileInputs.cache
 C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
 C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csprojResolveAssemblyReference.cache
