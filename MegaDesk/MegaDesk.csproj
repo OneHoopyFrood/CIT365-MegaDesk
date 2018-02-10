@@ -135,5 +135,10 @@
   <ItemGroup>
     <None Include="Resources\back.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="rushOrderPrices.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
