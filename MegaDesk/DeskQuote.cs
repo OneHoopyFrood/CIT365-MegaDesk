@@ -10,6 +10,7 @@ namespace MegaDesk
     public class DeskQuote
     {
         public Desk Desk;
+        private static Dictionary<int, int[]> rushAdditionalCost = new Dictionary<int, int[]>();
         private string customerName;
         public string CustomerName { get => customerName; set => customerName = value; }
         private decimal? _quoteAmount = null;
@@ -45,6 +46,15 @@ namespace MegaDesk
 
             CalculateQuote();
             QuoteDate = DateTime.Now;
+
+            if (!rushAdditionalCost.Any())
+            {
+                var rushOrderPrices = File.ReadAllLines("rushOrderPrices.txt").Select(l => int.Parse(l)).ToArray();
+
+                rushAdditionalCost.Add(3, new int[] { rushOrderPrices[0], rushOrderPrices[1], rushOrderPrices[2] });
+                rushAdditionalCost.Add(5, new int[] { rushOrderPrices[3], rushOrderPrices[4], rushOrderPrices[5] });
+                rushAdditionalCost.Add(7, new int[] { rushOrderPrices[6], rushOrderPrices[7], rushOrderPrices[8] });
+            }
         }
 
         public DeskQuote(string customerName, int width, int depth, int numDrawers, Desk.DeskMaterial material, int productionDays) 
@@ -82,20 +92,18 @@ namespace MegaDesk
 
             if (IsRush())
             {
-                switch (this.ProductionDays)
+                var sa = Desk.GetSurfaceArea();
+                if (sa < 1000)
                 {
-                    case 3:
-                        cost += 60;
-                        cost += (surfaceArea % 1000) * 10;
-                        break;
-                    case 5:
-                        cost += 40;
-                        cost += (surfaceArea % 1000) * 10;
-                        break;
-                    case 7:
-                        cost += 30;
-                        cost += (surfaceArea % 1000) * 5;
-                        break;
+                    cost += (decimal)rushAdditionalCost[ProductionDays][0];
+                }
+                else if(sa < 2001)
+                {
+                    cost += (decimal)rushAdditionalCost[ProductionDays][1];
+                }
+                else
+                {
+                    cost += (decimal)rushAdditionalCost[ProductionDays][2];
                 }
             }
 

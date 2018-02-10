@@ -14,3 +14,20 @@ C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.CoreCompil
 C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
 C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
 C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\bin\Debug\rushOrderPrices.txt
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\bin\Debug\DeskQuotes.csv
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe.config
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\bin\Debug\MegaDesk.pdb
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.SearchQuotes.resources
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.ViewAllQuotes.resources
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.DisplayQuote.resources
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.Resources.AddQuote.resources
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.MegaDesk.resources
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.Properties.Resources.resources
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.ViewQuote.resources
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.GenerateResource.Cache
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.CoreCompileInputs.cache
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
+C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
