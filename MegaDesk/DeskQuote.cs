@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace MegaDesk
 {
@@ -38,14 +39,19 @@ namespace MegaDesk
             private set;
         }
 
-        public DeskQuote(string customerName, Desk desk, int productionDays)
+        [JsonConstructor]
+        public DeskQuote(string customerName, Desk desk, int productionDays, decimal? quoteAmount = null, DateTime? quoteDate = null)
         {
             this.CustomerName = customerName;
             this.Desk = desk;
             this.ProductionDays = productionDays;
 
-            CalculateQuote();
-            QuoteDate = DateTime.Now;
+            if (quoteAmount.HasValue)
+                QuoteAmount = quoteAmount.Value;
+            else
+                CalculateQuote();
+
+            QuoteDate = quoteDate.HasValue ? quoteDate.Value : DateTime.Now;
 
             if (!rushAdditionalCost.Any())
             {
@@ -57,8 +63,8 @@ namespace MegaDesk
             }
         }
 
-        public DeskQuote(string customerName, int width, int depth, int numDrawers, Desk.DeskMaterial material, int productionDays) 
-            : this(customerName, new Desk(width, depth, numDrawers, material), productionDays)
+        public DeskQuote(string customerName, int width, int depth, int numDrawers, Desk.DeskMaterial material, int productionDays, decimal? quoteAmount = null, DateTime? quoteDate = null)
+            : this(customerName, new Desk(width, depth, numDrawers, material), productionDays, quoteAmount, quoteDate)
         {
 
         }
@@ -120,6 +126,14 @@ namespace MegaDesk
             File.AppendAllText(filename,
                 "\n" + String.Join(",", this.customerName, this.Desk.Width, this.Desk.Depth, this.Desk.NumDrawers, 
                 (int)this.Desk.Material, this.ProductionDays, this.QuoteDate.ToShortDateString()));
+        }
+
+        public void SaveToJSON(string filename)
+        {
+            string fileContents = File.ReadAllText(filename);
+            List<DeskQuote> deserializedContents = JsonConvert.DeserializeObject<List<DeskQuote>>(fileContents);
+            deserializedContents.Add(this);
+            File.WriteAllText(filename, JsonConvert.SerializeObject(deserializedContents, Formatting.Indented));
         }
     }
 }

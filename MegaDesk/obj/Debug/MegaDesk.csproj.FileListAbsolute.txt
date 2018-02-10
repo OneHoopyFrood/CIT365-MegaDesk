@@ -31,3 +31,7 @@ C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\ob
 C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.CoreCompileInputs.cache
 C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
 C:\Users\Joshua\Desktop\CIT 365\Projects\BYU-Idaho Projects\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\rushOrderPrices.txt
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\DeskQuotes.json
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Cole\Code\cit365\MegaDesk\MegaDesk\bin\Debug\Newtonsoft.Json.xml

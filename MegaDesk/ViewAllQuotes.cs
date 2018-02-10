@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -35,18 +36,8 @@ namespace MegaDesk
         {
             try
             {
-                var lines = File.ReadAllLines("DeskQuotes.csv")
-                    .Select(dq => dq.Split(',')).ToList();
-
-
-                this.AllQuotes = lines.Select(line => {
-                    Desk.DeskMaterial material;
-                    Enum.TryParse<Desk.DeskMaterial>(line[4], out material);
-                    Desk desk = new Desk(int.Parse(line[1]), int.Parse(line[2]), int.Parse(line[3]), material);
-                    DeskQuote loadedQuote = new DeskQuote(line[0], desk, String.IsNullOrEmpty(line[5]) ? 14 : int.Parse(line[5]));
-                    loadedQuote.QuoteDate = DateTime.Parse(line[6]);
-                    return loadedQuote;
-                }).ToList();
+                var text = File.ReadAllText("DeskQuotes.json");
+                this.AllQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(text);
             }
             catch (Exception ex)
             {

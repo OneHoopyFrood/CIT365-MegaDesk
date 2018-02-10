@@ -1,0 +1,26 @@
+[
+  {
+    "Desk": {
+      "Width": 24,
+      "Depth": 12,
+      "NumDrawers": 2,
+      "Material": 0
+    },
+    "CustomerName": "Bob Johnson",
+    "QuoteAmount": 350.0,
+    "QuoteDate": "2018-02-09T23:36:34.1081741-06:00",
+    "ProductionDays": 14
+  },
+  {
+    "Desk": {
+      "Width": 40,
+      "Depth": 20,
+      "NumDrawers": 5,
+      "Material": 2
+    },
+    "CustomerName": "Clay Akin",
+    "QuoteAmount": 615.0,
+    "QuoteDate": "2018-02-09T23:36:56.1538943-06:00",
+    "ProductionDays": 5
+  }
+]

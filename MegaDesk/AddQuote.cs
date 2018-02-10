@@ -118,11 +118,11 @@ namespace MegaDesk.Resources
                     prodDays = (int)rushOptions.SelectedValue;
                 }
                 DeskQuote newQuote = new DeskQuote(customerName.Text, int.Parse(widthInput.Text), int.Parse(depthInput.Text), (int)numDrawersInput.Value, newMaterial, prodDays);
-                newQuote.SaveToCSV("DeskQuotes.csv");
-                MessageBox.Show("Save Successful!");
+                newQuote.SaveToJSON("DeskQuotes.json");
                 ReturnToMain();
                 ViewQuote view = new ViewQuote(newQuote);
                 view.Show();
+                MessageBox.Show("Save Successful!");
             }
             catch
             {
