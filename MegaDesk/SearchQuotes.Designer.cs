@@ -56,6 +56,7 @@
             this.searchResultsListView.TabIndex = 3;
             this.searchResultsListView.UseCompatibleStateImageBehavior = false;
             this.searchResultsListView.View = System.Windows.Forms.View.Details;
+            this.searchResultsListView.ItemActivate += new System.EventHandler(this.searchResultsListView_ItemActivate);
             // 
             // materialComboBox
             // 

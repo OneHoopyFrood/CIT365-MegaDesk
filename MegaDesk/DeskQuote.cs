@@ -42,6 +42,15 @@ namespace MegaDesk
         [JsonConstructor]
         public DeskQuote(string customerName, Desk desk, int productionDays, decimal? quoteAmount = null, DateTime? quoteDate = null)
         {
+            if (!rushAdditionalCost.Any())
+            {
+                var rushOrderPrices = File.ReadAllLines("rushOrderPrices.txt").Select(l => int.Parse(l)).ToArray();
+
+                rushAdditionalCost.Add(3, new int[] { rushOrderPrices[0], rushOrderPrices[1], rushOrderPrices[2] });
+                rushAdditionalCost.Add(5, new int[] { rushOrderPrices[3], rushOrderPrices[4], rushOrderPrices[5] });
+                rushAdditionalCost.Add(7, new int[] { rushOrderPrices[6], rushOrderPrices[7], rushOrderPrices[8] });
+            }
+
             this.CustomerName = customerName;
             this.Desk = desk;
             this.ProductionDays = productionDays;
@@ -52,15 +61,6 @@ namespace MegaDesk
                 CalculateQuote();
 
             QuoteDate = quoteDate.HasValue ? quoteDate.Value : DateTime.Now;
-
-            if (!rushAdditionalCost.Any())
-            {
-                var rushOrderPrices = File.ReadAllLines("rushOrderPrices.txt").Select(l => int.Parse(l)).ToArray();
-
-                rushAdditionalCost.Add(3, new int[] { rushOrderPrices[0], rushOrderPrices[1], rushOrderPrices[2] });
-                rushAdditionalCost.Add(5, new int[] { rushOrderPrices[3], rushOrderPrices[4], rushOrderPrices[5] });
-                rushAdditionalCost.Add(7, new int[] { rushOrderPrices[6], rushOrderPrices[7], rushOrderPrices[8] });
-            }
         }
 
         public DeskQuote(string customerName, int width, int depth, int numDrawers, Desk.DeskMaterial material, int productionDays, decimal? quoteAmount = null, DateTime? quoteDate = null)

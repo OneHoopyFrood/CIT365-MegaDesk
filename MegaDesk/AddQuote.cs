@@ -124,7 +124,7 @@ namespace MegaDesk.Resources
                 view.Show();
                 MessageBox.Show("Save Successful!");
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Failed to save!");
             }

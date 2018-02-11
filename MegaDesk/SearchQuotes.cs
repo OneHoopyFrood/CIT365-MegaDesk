@@ -15,6 +15,7 @@ namespace MegaDesk
     public partial class SearchQuotes : Form
     {
         private List<DeskQuote> allQuotes;
+        private List<DeskQuote> searchResults;
 
         public SearchQuotes()
         {
@@ -56,7 +57,7 @@ namespace MegaDesk
                 return;
 
             var searchForMaterial = (Desk.DeskMaterial)materialComboBox.SelectedValue;
-            var searchResults = allQuotes.FindAll(q => q.Desk.Material == searchForMaterial);
+            searchResults = allQuotes.FindAll(q => q.Desk.Material == searchForMaterial);
 
             searchResultsListView.Items.Clear();
             if (searchResults.Count < 1)
@@ -70,6 +71,15 @@ namespace MegaDesk
                     searchResultsListView.Items.Add(new ListViewItem(new[] { result.CustomerName, result.Desk.Material.ToString(), result.QuoteAmount.ToString("C") }));
                 }
             }
+        }
+
+        private void searchResultsListView_ItemActivate(object sender, EventArgs e)
+        {
+            ListView list = (ListView)sender;
+            DeskQuote quote = searchResults[list.FocusedItem.Index];
+            ViewQuote viewQuoteForm = new ViewQuote(quote);
+            viewQuoteForm.Tag = this;
+            viewQuoteForm.Show(this);
         }
     }
 }
